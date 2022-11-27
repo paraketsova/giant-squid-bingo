@@ -1,7 +1,7 @@
 // PARSING
 
 const fs = require('fs');
-const data = fs.readFileSync('input-test.txt', { encoding: 'utf8' });
+const data = fs.readFileSync('input-prod.txt', { encoding: 'utf8' });
 
 const chunks = data.trim().split(/\r?\n\r?\n/);
 
