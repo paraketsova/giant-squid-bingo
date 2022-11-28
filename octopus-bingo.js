@@ -5,12 +5,12 @@ const data = fs.readFileSync('input-prod.txt', { encoding: 'utf8' });
 
 const chunks = data.trim().split(/\r?\n\r?\n/);
 
-const drawNumbers = chunks[0].split(",").map(el => Number(el));
+const drawNumbers = chunks[0].split(',').map(num => +num);
 
 const boards = chunks.slice(1)
   .map(board => board.split(/\r?\n/)
     .map(row => row.split(/\s+/g)
-      .map(num => +(num))));
+      .map(num => +num)));
 
 console.log(drawNumbers);
 console.log(boards);
